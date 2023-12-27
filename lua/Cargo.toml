@@ -1,0 +1,14 @@
+[package]
+edition = "2021"
+name = "lua"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mlua = {version = "0.9", features = ["lua53", "vendored", "send", "async", "serialize"]}
+psutil = {version = "3", default-features = false, features = ["process"]}
+tokio = {version = "1.0", features = ["full"]}
+
+[build-dependencies]
+lua-src = {version = "^546", features = ["ucid"]}

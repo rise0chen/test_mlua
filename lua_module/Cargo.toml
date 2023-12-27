@@ -1,0 +1,14 @@
+[package]
+authors = ["rise0chen<rise0chen@163.com>"]
+description = "lua module"
+edition = "2021"
+license-file = "LICENSE"
+name = "module"
+version = "0.2.3"
+
+[lib]
+crate-type = ["cdylib"]
+name = "module"
+
+[dependencies]
+mlua = {version = "0.9", features = ["lua53", "module", "send", "async", "serialize"]}
